@@ -2,7 +2,7 @@
 BT variation of MSM model is implemented in Go.
 
 ## Model
-De-meaned returns are modelled as $r_t = s_t N(0, 1)$, where $r_t$ is return at time t and $s_t$ is (heteroskedastic) volatility modelled as $s_t = s_0 sqrt(M_1 M_2 ... M_k)$. k is the model dimension and $M_i$ are 2-state Markov Chains.
+De-meaned returns are modelled as $r_t = s_t \mathcal{N}(0, 1)$, where $r_t$ is return at time t and $s_t$ is (heteroskedastic) volatility modelled as $s_t = s_0 \sqrt{M_1 M_2 ... M_k}$. k is the model dimension and $M_i$ are 2-state Markov Chains.
 
 Refer to Calvet and Fisher (2001)[^1]
 
