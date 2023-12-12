@@ -2,7 +2,17 @@
 BT variation of MSM model is implemented in Go.
 
 ## Model
-De-meaned returns are modelled as $r_t = \sigma_t z_t$, where $z_t \sim \mathcal{N}(0, 1)$ and $\sigma_t = \sigma_0 \sqrt{M_1 M_2 ... M_k}$. $k$ is the model dimension and $M_i$ are 2-state Markov Chains.
+De-meaned returns are modelled as 
+
+$$
+\begin{align*}
+r_t = \sigma_t z_t, \\
+z_t \sim \mathcal{N}(0, 1) \\
+\sigma_t = \sigma_0 \sqrt{M_1 M_2 ... M_k}
+\end{align*}
+$$
+
+$k$ is the model dimension and $M_i$ are 2-state Markov Chains.
 
 Refer to Calvet and Fisher (2001)[^1]
 
