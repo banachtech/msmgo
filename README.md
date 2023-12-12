@@ -2,7 +2,7 @@
 BT variation of MSM model is implemented in Go.
 
 ## Model
-De-meaned returns are modelled as $r_t = s_t \mathcal{N}(0, 1)$, where $r_t$ is return at time t and $s_t$ is (heteroskedastic) volatility modelled as $s_t = s_0 \sqrt{M_1 M_2 ... M_k}$. k is the model dimension and $M_i$ are 2-state Markov Chains.
+De-meaned returns are modelled as $r_t = \sigma_t z_t$, where $z_t \sim \mathcal{N}(0, 1)$ and $\sigma_t = \sigma_0 \sqrt{M_1 M_2 ... M_k}$. $k$ is the model dimension and $M_i$ are 2-state Markov Chains.
 
 Refer to Calvet and Fisher (2001)[^1]
 
@@ -18,10 +18,10 @@ g_i & 1-g_i
 \end{bmatrix}.
 $$
 
-This allows k-2 more degrees of freedom.
+This allows $k-2$ more degrees of freedom.
 
 ## Go Implementation
-The model is implemented as unconstrained optimisation with suitable parameter transformation. There are a total of k+2 parameters, m0 the binomial pdf paramter (1< m0 <2), s0 (> 0) the unconditional volatility and k probabilities. m0 is mapped into (-inf, inf) with inverse sigmoid, s0 with log and probabilities with inverse sigmoid.
+The model is implemented as unconstrained optimisation with suitable parameter transformation. There are a total of $k+2$ parameters, $m_0$ the binomial pdf paramter $(1< m_0 <2)$, $\sigma_0 > 0 the unconditional volatility and $k$ probabilities. $m_0$ is mapped into $(-\infty, \infty) with inverse sigmoid, $\sigma_0$ with log and probabilities with inverse sigmoid.
 
 ## Usage
 ```
