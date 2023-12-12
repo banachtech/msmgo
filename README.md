@@ -9,7 +9,7 @@ Refer to Calvet and Fisher (2001)[^1]
 [^1]: Calvet, L.; Fisher, A. (2001). "Forecasting multifractal volatility" [(PDF)](https://archive.nyu.edu/bitstream/2451/26894/2/wpa99017.pdf). Journal of Econometrics. 105: 27–58.
 
 ## BT Variation
-The original model parametrises the transition probabilities of Markov chains M_i with just two parameters. So the model is parsimonious and parameters do not grow with k. In BT variation, each chain $M_i$ is characterised by a probability parameter $g_i$ i.e. transition matrix is given by
+The original model parametrises the transition probabilities of Markov chains $M_i$ with just two parameters. So the model is parsimonious and parameters do not grow with k. In BT variation, each chain $M_i$ is characterised by a probability parameter $g_i$ i.e. transition matrix is given by
 
 $$
 \begin{bmatrix}
@@ -21,7 +21,7 @@ $$
 This allows $k-2$ more degrees of freedom.
 
 ## Go Implementation
-The model is implemented as unconstrained optimisation with suitable parameter transformation. There are a total of $k+2$ parameters, $m_0$ the binomial pdf paramter $(1< m_0 <2)$, $\sigma_0 > 0 the unconditional volatility and $k$ probabilities. $m_0$ is mapped into $(-\infty, \infty) with inverse sigmoid, $\sigma_0$ with log and probabilities with inverse sigmoid.
+The model is implemented as unconstrained optimisation with suitable parameter transformation. There are a total of $k+2$ parameters, $m_0$ the binomial pdf paramter $(1< m_0 <2)$, $\sigma_0 > 0 the unconditional volatility and $k$ probabilities. $m_0$ is mapped into $(-\infty, \infty)$ with inverse sigmoid, $\sigma_0$ with log and probabilities with inverse sigmoid.
 
 ## Usage
 ```
