@@ -22,7 +22,7 @@ Refer to Calvet and Fisher (2001)[^1]
 The original model parametrises the transition probabilities of Markov chains $M_i$ with just two parameters. So the model is parsimonious and parameters do not grow with k. In BT variation, each chain $M_i$ is characterised by a probability parameter $g_i$ i.e. transition matrix is given by
 
 $$
-\begin{bmatrix}
+\Phi_i = \begin{bmatrix}
 1-g_i & g_i \\
 g_i & 1-g_i
 \end{bmatrix}.
