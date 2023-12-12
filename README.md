@@ -21,7 +21,7 @@ $$
 This allows $k-2$ more degrees of freedom.
 
 ## Go Implementation
-The model is implemented as unconstrained optimisation with suitable parameter transformation. There are a total of $k+2$ parameters, $m_0$ the binomial pdf paramter $(1< m_0 <2)$, $\sigma_0 > 0 the unconditional volatility and $k$ probabilities. $m_0$ is mapped into $(-\infty, \infty)$ with inverse sigmoid, $\sigma_0$ with log and probabilities with inverse sigmoid.
+The model is implemented as unconstrained optimisation with suitable parameter transformation. There are a total of $k+2$ parameters, $m_0$ the binomial pdf paramter $(1< m_0 <2)$, $\sigma_0 > 0$ the unconditional volatility and $k$ probabilities. $m_0$ is mapped into $(-\infty, \infty)$ with inverse sigmoid, $\sigma_0$ with log and probabilities with inverse sigmoid.
 
 ## Usage
 ```
