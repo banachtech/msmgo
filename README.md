@@ -6,9 +6,9 @@ De-meaned returns are modelled as
 
 $$
 \begin{align*}
-r_t = \sigma_t z_t, \\
-z_t \sim \mathcal{N}(0, 1) \\
-\sigma_t = \sigma_0 \sqrt{M_1 M_2 ... M_k}
+r_t &= \sigma_t z_t, \\
+z_t &\sim \mathcal{N}(0, 1) \\
+\sigma_t &= \sigma_0 \sqrt{M_1 M_2 ... M_k}
 \end{align*}
 $$
 
